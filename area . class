@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string>
+using namespace std;
+class shape
+{
+private:
+    double  height;
+    double base;
+    double length;
+public:
+    shape(double h, double b, double l)
+    {
+        height=h;
+        base=b;
+        length=l;
+    }
+    double  calculateArea_triangle()
+    {
+        double area_of_triangle= (0.5 * ( base * height)) ;
+        return area_of_triangle;
+    }
+    double  calculateArea_rectangle()
+    {
+        double area_of_rectangle = length * base ;
+        return area_of_rectangle;
+    }
+};
+int main()
+{
+    double length;
+    double base;
+    double height;
+    
+    cout<<" PLZ ENTER THE HEIGHT "<<endl;
+    cin>>height;
+    cout<<" PLZ ENTER THE base "<<endl;
+    cin>>base;
+    cout<<" PLZ ENTER THE length "<<endl;
+    cin>>length;
+    
+    shape triangle(height,base,0);
+    shape rectangle(0,base,length);
+    cout<<" THE AREA OF TRIANGLE IS : "<<triangle.calculateArea_triangle()<<endl;
+    cout<<" THE AREA OF RECTANGLE IS : "<<rectangle.calculateArea_rectangle()<<endl;
+}
+
